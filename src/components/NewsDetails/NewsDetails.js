@@ -15,8 +15,6 @@ export const NewsDetails = ()=>{
         }
 
         const currentNews = fakeApi.find(item => {
-            console.log(item.id)
-            console.log(id)
             return item.id === Number(id)
         })
 

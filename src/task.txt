@@ -1,5 +1,26 @@
-https://mediastack.com/documentation
+0. News content
+https://newsapi.org/docs/get-started#top-headlines
+https://newsapi.org/docs/endpoints/everything
+Your API key is: f5f5e1cf1e514f048270127762dd4c6a
 
-https://mediastack.com/sources/ukraine-news-api
+1. https
+https://www.npmjs.com/package/axios
+npm i axios
 
-API Access Key: 6a4575a88ee1bbcb9381efcb036370b0
+https://axios-http.com/docs/instance
+https://axios-http.com/docs/config_defaults
+https://axios-http.com/docs/post_example
+
+
+2. Styles
+npm install --save @emotion/styled
+
+3. icons
+npm i react-icons
+
+4. loader
+npm install react-loader-spinner --save
+
+5. State
+npm install @reduxjs/toolkit
+npm install @reduxjs/toolkit react-redux
