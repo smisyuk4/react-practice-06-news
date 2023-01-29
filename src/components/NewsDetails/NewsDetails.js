@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState} from 'react';
 import { fakeApi } from "fakeApi";
 
+import { PostDetails } from "./NewsDetails.styled";
+
 export const NewsDetails = ()=>{
     const {id} = useParams()
     const [news, setNews] = useState({})
@@ -21,11 +23,10 @@ export const NewsDetails = ()=>{
         setNews(currentNews)
     },[id])
 
-    return <>
-            <p>test {id}</p>
+    return <PostDetails>    
             <h3>{news.title}</h3>
             <p>{news.image}</p>
-            <p>{news.newsdesc}</p>
+            <p>{news.desc}</p>
             <p>{news.security}</p>
-        </>
+        </PostDetails>
 }
