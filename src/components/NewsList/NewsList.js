@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Outlet } from "react-router-dom"
-import { useDispatch } from "react-redux"; //useSelector
-import { fetchNews } from "redux/operations";
+import { useGetNewsQuery } from "services/newsApi"
+
+
+
 import { NewsCard } from "components/NewsCard"
 import { fakeApi } from "fakeApi"
 import { NewsListWrp } from "./NewsList.styled"
@@ -9,12 +11,9 @@ import { NewsListWrp } from "./NewsList.styled"
 
 
 export const NewsList =()=> {
-    const dispatch = useDispatch();
+    const { data } = useGetNewsQuery()
 
-    useEffect(() => {
-        dispatch(fetchNews());
-    }, [dispatch]);
-
+    console.log(data)
     return <NewsListWrp>         
                 <Outlet/>
 
