@@ -7,12 +7,11 @@ export const PostWrp = styled.div`
 
 export const PostDetails = styled.div`
     position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    transform: translateY(80px);
+    top: 80px;
+    z-index: 200;
 
     width: 260px;
+    background-color: white;
     border: 2px solid red;
 `
 
@@ -28,4 +27,14 @@ export const ButtonStyled = styled.button`
 
     text-transform: uppercase;
     font-weight: 700;
+`
+
+export const PaginationStyled = styled.div`
+    position: sticky;
+    top: 300px;
+    z-index: 200;
+
+    width: 260px;
+    background-color: white;
+    border: 2px solid green;
 `

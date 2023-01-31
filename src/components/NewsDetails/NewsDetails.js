@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState} from 'react';
 // import { fakeApi } from "fakeApi";
 
-import { PostWrp, PostDetails, Controls, ButtonStyled } from "./NewsDetails.styled";
+import { PostWrp, PostDetails, Controls, ButtonStyled, PaginationStyled } from "./NewsDetails.styled";
 
 export const NewsDetails = ()=>{
     const {id} = useParams()
@@ -31,6 +31,13 @@ export const NewsDetails = ()=>{
                 <ButtonStyled type="button">delete</ButtonStyled>
               </Controls>
         </PostDetails>
+
+        <PaginationStyled>
+          <p>PAGES</p>
+          <ol>
+            <li>asd</li>
+          </ol>
+        </PaginationStyled>
       </PostWrp>
     )
 }
