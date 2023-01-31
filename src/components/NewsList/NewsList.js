@@ -5,8 +5,8 @@ import { useGetNewsQuery } from "services/newsApi"
 
 
 import { NewsCard } from "components/NewsCard"
-import { fakeApi } from "fakeApi"
-import { NewsListWrp } from "./NewsList.styled"
+// import { fakeApi } from "fakeApi"
+import { NewsListWrp, NewsColection } from "./NewsList.styled"
 
 
 
@@ -14,11 +14,13 @@ export const NewsList =()=> {
     const { data } = useGetNewsQuery()
 
     console.log(data)
-    return <NewsListWrp>         
-                <Outlet/>
+    return (data && 
+                <NewsListWrp>         
+                    <Outlet/>
 
-                <ul>
-                    {fakeApi.map(item=> <NewsCard key={item.id} news={item} />)}
-                </ul>                       
-            </NewsListWrp>
+                    <NewsColection>
+                        {data.articles.map(item=> <NewsCard key={item.url} news={item} />)}
+                    </NewsColection>                       
+                </NewsListWrp>
+    )
 }

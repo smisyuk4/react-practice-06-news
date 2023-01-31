@@ -1,9 +1,9 @@
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState} from 'react';
-import { fakeApi } from "fakeApi";
+// import { fakeApi } from "fakeApi";
 
-import { PostDetails } from "./NewsDetails.styled";
+import { PostWrp, PostDetails, Controls, ButtonStyled } from "./NewsDetails.styled";
 
 export const NewsDetails = ()=>{
     const {id} = useParams()
@@ -14,17 +14,23 @@ export const NewsDetails = ()=>{
           return
         }
 
-        const currentNews = fakeApi.find(item => {
-            return item.id === Number(id)
-        })
+        // const currentNews = fakeApi.find(item => {
+        //     return item.id === Number(id)
+        // })
 
-        setNews(currentNews)
+        // setNews(currentNews)
     },[id])
 
-    return <PostDetails>    
-            <h3>{news.title}</h3>
-            <p>{news.image}</p>
-            <p>{news.desc}</p>
-            <p>{news.security}</p>
+    return(
+      <PostWrp>
+        <PostDetails>    
+              <h3>{id}</h3>
+              <a href="dfsdfsdf">link to page with details</a>
+              <Controls>
+                <ButtonStyled type="button">save</ButtonStyled>
+                <ButtonStyled type="button">delete</ButtonStyled>
+              </Controls>
         </PostDetails>
+      </PostWrp>
+    )
 }
